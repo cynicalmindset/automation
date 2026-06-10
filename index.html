@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workik – Automate anything, Ship faster</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ════ NAVBAR ════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">workik</a>
+      <ul class="nav-links">
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Solutions</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">More
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2.5 3.75L5 6.25l2.5-2.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="#" class="nav-cta">Get started free</a>
+      </div>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- ════ HERO ════ -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <!-- Left -->
+      <div class="hero-left">
+        <h1>
+          Automate anything,<br>
+          <em class="italic-gradient">Ship faster</em>
+        </h1>
+        <p>lroem lorem lorem ,orem lorem lorem  lroem lorem lorem ,orem lorem lorem lroem lorem lorem ,orem lorem lorem</p>
+        <div class="hero-ctas">
+          <a href="#" class="btn-fill">Use for free</a>
+          <a href="#" class="btn-glass-demo">Watch demo</a>
+        </div>
+      </div>
+      <!-- Right – glassmorphism container with blank image -->
+      <div class="hero-right">
+        <div class="hero-glass-card">
+          <img src="asstets/hero.png" alt="Workik automation workflow" class="hero-img" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ START WITH A TEMPLATE ════ -->
+  <section class="section templates-section" id="templates">
+    <div class="sec-inner">
+      <h2 class="center">Start with a <em class="italic-gradient">template</em></h2>
+      <p class="center">Kick off your automation in seconds — pick a template built for real workflows and make it yours.</p>
+
+      <div class="templates-grid">
+
+        <div class="tmpl-card">
+          <h3>Raise Tickets <em class="italic-gradient">Automatically</em></h3>
+          <p class="tmpl-desc">Auto-create GitHub issues from CI failures and post instant Slack alerts to your dev channel.</p>
+          <div class="tmpl-pill">
+            <div class="tmpl-logo-slot"><img src="" alt="GitHub" /></div>
+            <div class="tmpl-logo-slot"><img src="" alt="Slack" /></div>
+            <div class="tmpl-logo-slot"><img src="" alt="Jira" /></div>
+          </div>
+        </div>
+
+        <div class="tmpl-card">
+          <h3>Deploy Code <em class="italic-gradient">Continuously</em></h3>
+          <p class="tmpl-desc">Trigger automated deploys on every merge with rollback alerts and status updates in Slack.</p>
+          <div class="tmpl-pill">
+            <div class="tmpl-logo-slot"><img src="" alt="GitHub Actions" /></div>
+            <div class="tmpl-logo-slot"><img src="" alt="Docker" /></div>
+            <div class="tmpl-logo-slot"><img src="" alt="AWS" /></div>
+          </div>
+        </div>
+
+        <div class="tmpl-card">
+          <h3>Summarize Meetings <em class="italic-gradient">Instantly</em></h3>
+          <p class="tmpl-desc">Record and transcribe Zoom calls, then push structured summaries straight to your Notion workspace.</p>
+          <div class="tmpl-pill">
+            <div class="tmpl-logo-slot"><img src="" alt="Zoom" /></div>
+            <div class="tmpl-logo-slot"><img src="" alt="Notion" /></div>
+            <div class="tmpl-logo-slot"><img src="" alt="Slack" /></div>
+          </div>
+        </div>
+
+        <div class="tmpl-card">
+          <h3>Monitor Errors <em class="italic-gradient">Proactively</em></h3>
+          <p class="tmpl-desc">Catch production errors in Sentry and auto-assign tickets before users even notice something broke.</p>
+          <div class="tmpl-pill">
+            <div class="tmpl-logo-slot"><img src="" alt="Sentry" /></div>
+            <div class="tmpl-logo-slot"><img src="" alt="PagerDuty" /></div>
+            <div class="tmpl-logo-slot"><img src="" alt="Linear" /></div>
+          </div>
+        </div>
+
+        <div class="tmpl-card">
+          <h3>Sync Data <em class="italic-gradient">Seamlessly</em></h3>
+          <p class="tmpl-desc">Keep Airtable, Google Sheets and your CRM in perfect sync without writing a single line of code.</p>
+          <div class="tmpl-pill">
+            <div class="tmpl-logo-slot"><img src="" alt="Airtable" /></div>
+            <div class="tmpl-logo-slot"><img src="" alt="Google Sheets" /></div>
+            <div class="tmpl-logo-slot"><img src="" alt="HubSpot" /></div>
+          </div>
+        </div>
+
+        <div class="tmpl-card">
+          <h3>Review PRs <em class="italic-gradient">Automatically</em></h3>
+          <p class="tmpl-desc">AI-powered pull request reviews with Linear ticket updates and threaded team notifications on open.</p>
+          <div class="tmpl-pill">
+            <div class="tmpl-logo-slot"><img src="" alt="GitHub" /></div>
+            <div class="tmpl-logo-slot"><img src="" alt="Linear" /></div>
+            <div class="tmpl-logo-slot"><img src="" alt="Slack" /></div>
+          </div>
+        </div>
+
+        <div class="tmpl-card">
+          <h3>Report Progress <em class="italic-gradient">Daily</em></h3>
+          <p class="tmpl-desc">Auto-generate sprint summaries every morning and push them to Notion, email, and your Slack standup.</p>
+          <div class="tmpl-pill">
+            <div class="tmpl-logo-slot"><img src="" alt="Notion" /></div>
+            <div class="tmpl-logo-slot"><img src="" alt="Google Sheets" /></div>
+            <div class="tmpl-logo-slot"><img src="" alt="Slack" /></div>
+          </div>
+        </div>
+
+        <div class="tmpl-card">
+          <h3>Onboard Users <em class="italic-gradient">Effortlessly</em></h3>
+          <p class="tmpl-desc">Trigger personalized welcome flows across HubSpot, Intercom and Slack the moment someone signs up.</p>
+          <div class="tmpl-pill">
+            <div class="tmpl-logo-slot"><img src="" alt="HubSpot" /></div>
+            <div class="tmpl-logo-slot"><img src="" alt="Intercom" /></div>
+            <div class="tmpl-logo-slot"><img src="" alt="Slack" /></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="center-btn" style="margin-top:48px">
+        <a href="#" class="btn-fill">More Templates</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ CONNECT YOUR STACK ════ -->
+  <section class="section connect-section" id="connect">
+    <div class="sec-inner">
+      <h2 class="center">Connect your <em class="italic-gradient">stack</em></h2>
+      <p class="center">Integrate the tools your team already uses. Workik connects with 100+ apps out of the box.</p>
+
+      <div class="connect-stage">
+        <div class="connect-inner">
+
+          <!-- Stat + rings overlay -->
+          <div class="cc-stat">
+            <div class="cc-rings">
+              <div class="cc-ring"></div>
+              <div class="cc-ring"></div>
+              <div class="cc-ring"></div>
+            </div>
+            <p class="cc-stat-over">Connects Over</p>
+            <p class="cc-stat-count">100+ Apps</p>
+          </div>
+
+          <!-- Left: 3 scrolling logo columns -->
+          <div class="logo-cols logo-cols-left">
+            <div class="logo-col">
+              <div class="logo-col-inner" style="animation-duration:40s">
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+              </div>
+            </div>
+            <div class="logo-col">
+              <div class="logo-col-inner dir-down" style="animation-duration:50s">
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+              </div>
+            </div>
+            <div class="logo-col">
+              <div class="logo-col-inner" style="animation-duration:34s">
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Spacer holds space for the absolutely-positioned card -->
+          <div class="cc-col-gap"></div>
+
+          <!-- Center: connect card -->
+          <div class="connect-card" id="connectCard">
+            <div class="cc-header">
+              <div class="cc-icon" id="ccIcon">SL</div>
+              <span class="cc-name" id="ccName">Slack</span>
+            </div>
+            <p class="cc-how">How you can integrate <em id="ccHowName">Slack</em></p>
+            <ul class="cc-list" id="ccList">
+              <li>Get notified on task updates instantly</li>
+              <li>Create tasks via Slack slash commands</li>
+              <li>Ask AI, get answers in your thread</li>
+              <li>Sync team context from Slack conversations</li>
+              <li>Trigger automations from Slack events</li>
+            </ul>
+          </div>
+
+          <!-- Right: 3 scrolling logo columns -->
+          <div class="logo-cols logo-cols-right">
+            <div class="logo-col">
+              <div class="logo-col-inner dir-down" style="animation-duration:45s">
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+              </div>
+            </div>
+            <div class="logo-col">
+              <div class="logo-col-inner" style="animation-duration:30s">
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+              </div>
+            </div>
+            <div class="logo-col">
+              <div class="logo-col-inner dir-down" style="animation-duration:55s">
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+                <div class="logo-box"><img src="" alt=""></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ SUPPORTED ACTIONS ════ -->
+  <section class="section actions-section" id="actions">
+    <div class="sec-inner">
+      <h2 class="center">Supported <em class="italic-gradient">actions</em></h2>
+      <div class="tab-bar" id="tabBar">
+        <button class="tab active" data-filter="all">All</button>
+        <button class="tab" data-filter="trigger">Trigger</button>
+        <button class="tab" data-filter="logic">Logic</button>
+        <button class="tab" data-filter="actions">Actions</button>
+      </div>
+      <div class="actions-rows" id="actionsGrid">
+        <!-- Row 1 -->
+        <div class="action-row">
+          <div class="action-pill" data-type="trigger"><span class="a-dot"></span><span class="a-name">Webhook received</span><span class="a-tag t-trigger">Trigger</span></div>
+          <div class="action-pill" data-type="trigger"><span class="a-dot"></span><span class="a-name">Scheduled trigger</span><span class="a-tag t-trigger">Trigger</span></div>
+          <div class="action-pill" data-type="trigger"><span class="a-dot"></span><span class="a-name">Slack event</span><span class="a-tag t-trigger">Trigger</span></div>
+        </div>
+        <!-- Row 2 -->
+        <div class="action-row">
+          <div class="action-pill" data-type="logic"><span class="a-dot logic-dot"></span><span class="a-name">Conditional branch</span><span class="a-tag t-logic">Logic</span></div>
+          <div class="action-pill" data-type="actions"><span class="a-dot action-dot"></span><span class="a-name">Create GitHub issue</span><span class="a-tag t-action">Actions</span></div>
+          <div class="action-pill" data-type="actions"><span class="a-dot action-dot"></span><span class="a-name">Send Slack message</span><span class="a-tag t-action">Actions</span></div>
+        </div>
+        <!-- Row 3 -->
+        <div class="action-row">
+          <div class="action-pill" data-type="logic"><span class="a-dot logic-dot"></span><span class="a-name">Loop / Iterator</span><span class="a-tag t-logic">Logic</span></div>
+          <div class="action-pill" data-type="actions"><span class="a-dot action-dot"></span><span class="a-name">HTTP request</span><span class="a-tag t-action">Actions</span></div>
+          <div class="action-pill" data-type="trigger"><span class="a-dot"></span><span class="a-name">Form submitted</span><span class="a-tag t-trigger">Trigger</span></div>
+        </div>
+      </div>
+      <div class="center-btn"><a href="#" class="hooks-link">100+ more hooks</a></div>
+    </div>
+  </section>
+
+  <!-- ════ FEATURES WE OFFER ════ -->
+  <section class="section features-section" id="features">
+    <div class="sec-inner">
+      <h2 class="center">Features we <em class="italic-gradient">offer</em></h2>
+      <p class="center">Everything you need to build, run, and monitor powerful automations — without writing a line of code.</p>
+      <div class="features-grid">
+        <div class="feat-card">
+          <div class="feat-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="url(#fi1)" stroke-width="1.8" stroke-linejoin="round"/><defs><linearGradient id="fi1" x1="2" y1="2" x2="22" y2="22"><stop stop-color="#7c3aed"/><stop offset="1" stop-color="#4f46e5"/></linearGradient></defs></svg></div>
+          <h3>Context Share</h3>
+          <p class="feat-desc">lorem lorem lorem orem lorem lorem orem lorem lorem orem lorem lorem orem</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="8" width="8" height="8" rx="2" stroke="url(#fi2)" stroke-width="1.8"/><rect x="13" y="8" width="8" height="8" rx="2" stroke="url(#fi2)" stroke-width="1.8"/><path d="M7 8V5h10v3" stroke="url(#fi2)" stroke-width="1.8" stroke-linecap="round"/><defs><linearGradient id="fi2" x1="3" y1="3" x2="21" y2="21"><stop stop-color="#7c3aed"/><stop offset="1" stop-color="#4f46e5"/></linearGradient></defs></svg></div>
+          <h3>Context Share</h3>
+          <p class="feat-desc">lorem lorem lorem orem lorem lorem orem lorem lorem orem lorem lorem orem</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="url(#fi3)" stroke-width="1.8"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3" stroke="url(#fi3)" stroke-width="1.8" stroke-linecap="round"/><defs><linearGradient id="fi3" x1="2" y1="2" x2="22" y2="22"><stop stop-color="#7c3aed"/><stop offset="1" stop-color="#4f46e5"/></linearGradient></defs></svg></div>
+          <h3>Context Share</h3>
+          <p class="feat-desc">lorem lorem lorem orem lorem lorem orem lorem lorem orem lorem lorem orem</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="url(#fi4)" stroke-width="1.8" stroke-linecap="round"/><defs><linearGradient id="fi4" x1="3" y1="3" x2="21" y2="21"><stop stop-color="#7c3aed"/><stop offset="1" stop-color="#4f46e5"/></linearGradient></defs></svg></div>
+          <h3>Context Share</h3>
+          <p class="feat-desc">lorem lorem lorem orem lorem lorem orem lorem lorem orem lorem lorem orem</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M19 9l-7-7-7 7M12 2v14" stroke="url(#fi5)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 22h14" stroke="url(#fi5)" stroke-width="1.8" stroke-linecap="round"/><defs><linearGradient id="fi5" x1="5" y1="2" x2="19" y2="22"><stop stop-color="#7c3aed"/><stop offset="1" stop-color="#4f46e5"/></linearGradient></defs></svg></div>
+          <h3>Context Share</h3>
+          <p class="feat-desc">lorem lorem lorem orem lorem lorem orem lorem lorem orem lorem lorem orem</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3C7 3 3 7 3 12s4 9 9 9 9-4 9-9-4-9-9-9zM12 7v5l3 3" stroke="url(#fi6)" stroke-width="1.8" stroke-linecap="round"/><defs><linearGradient id="fi6" x1="3" y1="3" x2="21" y2="21"><stop stop-color="#7c3aed"/><stop offset="1" stop-color="#4f46e5"/></linearGradient></defs></svg></div>
+          <h3>Context Share</h3>
+          <p class="feat-desc">lorem lorem lorem orem lorem lorem orem lorem lorem orem lorem lorem orem</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ MODELS WE SUPPORT ════ -->
+  <section class="section models-section" id="models">
+    <div class="sec-inner">
+      <h2 class="center">Models we <em class="italic-gradient">support</em></h2>
+      <p class="center">Connect your own API key and use any leading AI model. No token limits when you BYOK.</p>
+      <div class="models-track-wrap">
+        <div class="models-track" id="modelsTrack">
+          <div class="model-item"><div class="model-icon groq-bg">GQ</div><span>Groq qwen</span></div>
+          <div class="model-item"><div class="model-icon openai-bg">G</div><span>GPT-4.1</span></div>
+          <div class="model-item"><div class="model-icon anth-bg">A</div><span>Opus 4.1</span></div>
+          <div class="model-item"><div class="model-icon gem-bg">G</div><span>gemeni</span></div>
+          <div class="model-item"><div class="model-icon hk-bg">H</div><span>Hakiyu</span></div>
+          <div class="model-item"><div class="model-icon az-bg">Az</div><span>Azure</span></div>
+          <!-- duplicate for infinite scroll -->
+          <div class="model-item"><div class="model-icon groq-bg">GQ</div><span>Groq qwen</span></div>
+          <div class="model-item"><div class="model-icon openai-bg">G</div><span>GPT-4.1</span></div>
+          <div class="model-item"><div class="model-icon anth-bg">A</div><span>Opus 4.1</span></div>
+          <div class="model-item"><div class="model-icon gem-bg">G</div><span>gemeni</span></div>
+          <div class="model-item"><div class="model-icon hk-bg">H</div><span>Hakiyu</span></div>
+          <div class="model-item"><div class="model-icon az-bg">Az</div><span>Azure</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ HOW ALL THIS WORKS ════ -->
+  <section class="section how-section" id="how">
+    <div class="sec-inner">
+
+      <h2 class="center">How all this <em class="italic-gradient">works</em></h2>
+      <p class="center">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+
+      <div class="connect-stage">
+        <div class="connect-inner">
+          <p class="how-inner-title">3 easy steps to create <em class="italic-gradient">automation</em></p>
+          <div class="how-steps-row">
+
+            <!-- Card 1: Register -->
+            <div class="how-step-card">
+              <span class="hsc-label">01</span>
+              <p class="hsc-title">Register</p>
+              <p class="hsc-desc">Sign up in seconds. No credit card required to get started with Workik.</p>
+              <div class="hsc-img-wrap">
+                <img src="asstets/card-1(register).png" alt="Register">
+              </div>
+            </div>
+
+            <!-- Card 2: Drag & Drop (featured) -->
+            <div class="how-step-card how-step-featured">
+              <span class="hsc-label">02</span>
+              <p class="hsc-title">Drag &amp; drop</p>
+              <p class="hsc-desc">Connect apps visually. No code needed — just drag, link, and configure.</p>
+              <div class="hsc-img-wrap">
+                <img src="asstets/card-2(drag).png" alt="Drag and Drop">
+              </div>
+            </div>
+
+            <!-- Card 3: Test, Run & Monitor -->
+            <div class="how-step-card">
+              <span class="hsc-label">03</span>
+              <p class="hsc-title">Test, run &amp; monitor</p>
+              <p class="hsc-desc">Run your workflow, watch it live, and track every step from your dashboard.</p>
+              <div class="hsc-img-wrap">
+                <img src="asstets/card-3(test).png" alt="Test Run Monitor">
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ FAQ ════ -->
+  <section class="section faq-section" id="faq">
+    <div class="sec-inner faq-inner">
+      <h2 class="center">Frequently asked <em class="italic-gradient">questions</em></h2>
+      <p class="center">Can't find the answer? Reach out to our support team.</p>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span>What features does Standard include? Can I change or upgrade my plan anytime?</span><span class="faq-plus">+</span></button>
+          <div class="faq-a"><p>Yes, you can switch or upgrade plans at any time from your account settings. Changes take effect at the start of the next billing period with prorated adjustments.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span>What&#39;s the difference between standard and advanced AI tokens?</span><span class="faq-plus">+</span></button>
+          <div class="faq-a"><p>Standard tokens cover models like GPT-3.5 and basic tiers. Advanced tokens are for premium models like GPT-4.1 and Opus 4 — more capable but cost more per token.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span>What happens when I run out of tokens?</span><span class="faq-plus">+</span></button>
+          <div class="faq-a"><p>AI-powered features pause until the next billing cycle or you add a top-up. Non-AI automations continue to run without interruption.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span>What is Bring Your Own Key (BYOK) and how does it work?</span><span class="faq-plus">+</span></button>
+          <div class="faq-a"><p>Connect your own API key from OpenAI, Anthropic, Google, xAI, or Deepseek and all AI requests go through your key directly — no token limits applied. You pay your AI provider at their standard rates. BYOK is available on every plan, including Free.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span>How does the Team plan differ from an individual Premium plan?</span><span class="faq-plus">+</span></button>
+          <div class="faq-a"><p>The Team plan includes shared workspaces, role-based access control, centralized billing, and team analytics. Premium is for individual power users needing advanced AI features.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span>Is Workik SOC2 Type II certified?</span><span class="faq-plus">+</span></button>
+          <div class="faq-a"><p>Yes, Workik is SOC2 Type II certified. All data is encrypted at rest and in transit. We take compliance and security seriously.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span>Do you offer pricing for educational institutions or non-profits?</span><span class="faq-plus">+</span></button>
+          <div class="faq-a"><p>Yes — we offer special pricing for educational institutions, nonprofits, and open-source projects. Contact us at pricing@workik.com to learn more.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ SEE WORKIK IN ACTION (FINAL CTA) ════ -->
+  <section class="section cta-section" id="cta">
+    <div class="sec-inner cta-inner">
+      <div class="cta-card">
+        <div class="cta-glow-1"></div>
+        <div class="cta-glow-2"></div>
+        <div class="cta-content">
+          <h2 class="cta-title">See Workik in action</h2>
+          <p class="cta-sub">Watch how engineering teams centralise context, resolve tasks faster, and ship with confidence.</p>
+          <div class="cta-btns">
+            <a href="#" class="btn-fill">Book a 30-minute demo</a>
+            <a href="#" class="btn-outline">Get started free</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ FOOTER ════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo" style="margin-bottom:14px">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect width="22" height="22" rx="5" fill="url(#flg)"/><path d="M6 11l3.5 3.5L16 8" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="flg" x1="0" y1="0" x2="22" y2="22"><stop stop-color="#7c3aed"/><stop offset="1" stop-color="#4338ca"/></linearGradient></defs></svg>
+          <span>workik</span>
+        </a>
+        <p class="footer-tag">Automate anything, ship faster. Built for engineering teams.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col"><h4>Product</h4><ul><li><a href="#">Features</a></li><li><a href="#">Pricing</a></li><li><a href="#">Templates</a></li><li><a href="#">Integrations</a></li></ul></div>
+        <div class="footer-col"><h4>Solutions</h4><ul><li><a href="#">Engineering</a></li><li><a href="#">DevOps</a></li><li><a href="#">Startups</a></li><li><a href="#">Enterprise</a></li></ul></div>
+        <div class="footer-col"><h4>Resources</h4><ul><li><a href="#">Blog</a></li><li><a href="#">Docs</a></li><li><a href="#">Changelog</a></li><li><a href="#">Status</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="#">About</a></li><li><a href="#">Careers</a></li><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li></ul></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Workik. All rights reserved.</span>
+      <div class="footer-socials"><a href="#">𝕏</a><a href="#">GH</a><a href="#">in</a></div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
