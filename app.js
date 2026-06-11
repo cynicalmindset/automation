@@ -6,13 +6,25 @@
 
 
   /* ── Hamburger ── */
-  const ham = document.getElementById('hamburger');
-  const navLinks = document.querySelector('.nav-links');
-  if (ham) ham.addEventListener('click', () => {
-    const open = navLinks.style.display === 'flex';
-    navLinks.style.cssText = open ? '' :
-      'display:flex;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:rgba(7,7,15,.97);padding:16px 24px;gap:4px;z-index:199;border-bottom:1px solid rgba(255,255,255,.07)';
-  });
+  const ham        = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  function closeMenu() {
+    ham.classList.remove('open');
+    mobileMenu.classList.remove('open');
+  }
+
+  if (ham && mobileMenu) {
+    ham.addEventListener('click', () => {
+      const opening = !mobileMenu.classList.contains('open');
+      opening ? (ham.classList.add('open'), mobileMenu.classList.add('open'))
+               : closeMenu();
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+  }
 
   /* ── Tab Filter (Supported Actions) ── */
   const tabs = document.querySelectorAll('.tab');
@@ -104,16 +116,50 @@
   ];
 
   function buildConnectSection() {
+
+    /* Mobile: 3 horizontal scrolling rows — built first, independent of column wrappers */
+    const mobileWrap = document.getElementById('connectRowsMobile');
+    if (mobileWrap) {
+      const rowDefs = [
+        { indices: [0,1,2,3,4,5,6,7,8,9,10,11], cls: '' },
+        { indices: [6,7,8,9,10,11,0,1,2,3,4,5], cls: 'cr-right' },
+        { indices: [3,5,7,9,1,11,0,4,6,8,2,10], cls: 'cr-left2' },
+      ];
+      rowDefs.forEach(({ indices, cls }) => {
+        const apps = [...indices, ...indices].map(i => CONNECT_APPS[i]);
+        const row = document.createElement('div');
+        row.className = 'cr-row';
+        const track = document.createElement('div');
+        track.className = 'cr-track' + (cls ? ' ' + cls : '');
+        apps.forEach(app => {
+          const box = document.createElement('div');
+          box.className = 'logo-box';
+          const img = document.createElement('img');
+          img.src = '';
+          img.alt = app.name;
+          box.appendChild(img);
+          track.appendChild(box);
+        });
+        row.appendChild(track);
+        mobileWrap.appendChild(row);
+      });
+    }
+
     const leftWrap  = document.getElementById('connectLeft');
     const rightWrap = document.getElementById('connectRight');
     if (!leftWrap || !rightWrap) return;
 
-    /* [wrapper, appIndices, scrollDir, durationSec] — 2 cols per side */
+    leftWrap.innerHTML  = '';
+    rightWrap.innerHTML = '';
+
+    /* [wrapper, appIndices, scrollDir, durationSec] — 3 cols per side */
     const colDefs = [
-      [leftWrap,  [0,2,4,6,8,10], 'down', 20],
-      [leftWrap,  [1,3,5,7,9,11], 'up',   15],
-      [rightWrap, [1,5,9,3,7,11], 'up',   17],
-      [rightWrap, [0,2,4,6,8,10], 'down', 23],
+      [leftWrap,  [0,2,4,6,8,10],  'down', 20],
+      [leftWrap,  [1,3,5,7,9,11],  'up',   15],
+      [leftWrap,  [0,3,6,9,2,5],   'down', 26],
+      [rightWrap, [1,5,9,3,7,11],  'up',   17],
+      [rightWrap, [0,2,4,6,8,10],  'down', 23],
+      [rightWrap, [4,7,10,1,8,11], 'up',   19],
     ];
 
     colDefs.forEach(([wrap, indices, dir, speed]) => {
@@ -141,6 +187,7 @@
       wrap.appendChild(col);
     });
 
+
     /* Click → update center card */
     const stage = document.querySelector('.connect-stage');
     if (!stage) return;
@@ -152,13 +199,20 @@
         const icon = document.getElementById('ccIcon');
         icon.textContent      = app.abbr;
         icon.style.background = app.bg;
-        icon.style.color      = app.dark; /* readable on light card bg */
+        icon.style.color      = app.dark;
         document.getElementById('ccName').textContent    = app.name;
         document.getElementById('ccHowName').textContent = app.name;
         document.getElementById('ccList').innerHTML =
           app.features.map(f => `<li>${f}</li>`).join('');
+        /* snap to below, then let CSS transition slide it back up */
+        card.style.transition = 'none';
+        card.style.transform  = 'translateX(-50%) translateY(24px)';
         card.classList.remove('fading');
-      }, 200);
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          card.style.transition = '';
+          card.style.transform  = '';
+        }));
+      }, 220);
     }
 
     stage.addEventListener('click', e => {
@@ -191,5 +245,43 @@
     track.addEventListener('mouseenter', () => track.style.animationPlayState = 'paused');
     track.addEventListener('mouseleave', () => track.style.animationPlayState = 'running');
   }
+
+  /* ── How section swiper (mobile only) ── */
+  function initHowSwiper() {
+    if (window.innerWidth > 640) return;
+    const cards = Array.from(document.querySelectorAll('.how-step-card'));
+    const dots  = Array.from(document.querySelectorAll('.how-dot'));
+    const row   = document.querySelector('.how-steps-row');
+    if (!cards.length || !row) return;
+
+    let current = 0;
+    let startX  = 0;
+
+    function update() {
+      cards.forEach((c, i) => {
+        c.classList.remove('swipe-prev', 'swipe-active', 'swipe-next');
+        if (i === current)         c.classList.add('swipe-active');
+        else if (i === current - 1) c.classList.add('swipe-prev');
+        else if (i === current + 1) c.classList.add('swipe-next');
+      });
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    }
+
+    row.addEventListener('touchstart', e => {
+      startX = e.touches[0].clientX;
+    }, { passive: true });
+
+    row.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) < 40) return;
+      if (dx < 0 && current < cards.length - 1) current++;
+      else if (dx > 0 && current > 0) current--;
+      update();
+    }, { passive: true });
+
+    update();
+  }
+
+  initHowSwiper();
 
 })();

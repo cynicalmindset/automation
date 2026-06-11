@@ -29,6 +29,18 @@
       </div>
       <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
     </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <ul class="mobile-nav-links">
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Solutions</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">More</a></li>
+      </ul>
+      <div class="mobile-menu-footer">
+        <a href="#" class="nav-cta mobile-cta">Get started free</a>
+      </div>
+    </div>
   </nav>
 
   <!-- ════ HERO ════ -->
@@ -104,44 +116,45 @@
         </div>
 
         <div class="tmpl-card">
-          <h3>Sync Data <em class="italic-gradient">Seamlessly</em></h3>
-          <p class="tmpl-desc">Keep Airtable, Google Sheets and your CRM in perfect sync without writing a single line of code.</p>
+          <h3>Sync CRM <em class="italic-gradient">Automatically</em></h3>
+          <p class="tmpl-desc">Push new form submissions to HubSpot, trigger welcome sequences, and notify sales in Slack instantly.</p>
           <div class="tmpl-pill">
-            <div class="tmpl-logo-slot"><img src="" alt="Airtable" /></div>
-            <div class="tmpl-logo-slot"><img src="" alt="Google Sheets" /></div>
             <div class="tmpl-logo-slot"><img src="" alt="HubSpot" /></div>
+            <div class="tmpl-logo-slot"><img src="" alt="Slack" /></div>
+            <div class="tmpl-logo-slot"><img src="" alt="Notion" /></div>
           </div>
         </div>
 
         <div class="tmpl-card">
-          <h3>Review PRs <em class="italic-gradient">Automatically</em></h3>
-          <p class="tmpl-desc">AI-powered pull request reviews with Linear ticket updates and threaded team notifications on open.</p>
+          <h3>Review PRs <em class="italic-gradient">Faster</em></h3>
+          <p class="tmpl-desc">Auto-assign reviewers on pull request open and post a summary card to your team's Slack channel.</p>
           <div class="tmpl-pill">
             <div class="tmpl-logo-slot"><img src="" alt="GitHub" /></div>
+            <div class="tmpl-logo-slot"><img src="" alt="Slack" /></div>
             <div class="tmpl-logo-slot"><img src="" alt="Linear" /></div>
-            <div class="tmpl-logo-slot"><img src="" alt="Slack" /></div>
           </div>
         </div>
 
         <div class="tmpl-card">
-          <h3>Report Progress <em class="italic-gradient">Daily</em></h3>
-          <p class="tmpl-desc">Auto-generate sprint summaries every morning and push them to Notion, email, and your Slack standup.</p>
+          <h3>Track Sprints <em class="italic-gradient">Effortlessly</em></h3>
+          <p class="tmpl-desc">Sync Jira sprint progress to a Notion dashboard and send daily standup digests to Slack automatically.</p>
           <div class="tmpl-pill">
+            <div class="tmpl-logo-slot"><img src="" alt="Jira" /></div>
             <div class="tmpl-logo-slot"><img src="" alt="Notion" /></div>
-            <div class="tmpl-logo-slot"><img src="" alt="Google Sheets" /></div>
             <div class="tmpl-logo-slot"><img src="" alt="Slack" /></div>
           </div>
         </div>
 
         <div class="tmpl-card">
-          <h3>Onboard Users <em class="italic-gradient">Effortlessly</em></h3>
-          <p class="tmpl-desc">Trigger personalized welcome flows across HubSpot, Intercom and Slack the moment someone signs up.</p>
+          <h3>Onboard Users <em class="italic-gradient">Seamlessly</em></h3>
+          <p class="tmpl-desc">Welcome new signups with personalised emails, create CRM records, and add them to the right Slack channel.</p>
           <div class="tmpl-pill">
             <div class="tmpl-logo-slot"><img src="" alt="HubSpot" /></div>
-            <div class="tmpl-logo-slot"><img src="" alt="Intercom" /></div>
             <div class="tmpl-logo-slot"><img src="" alt="Slack" /></div>
+            <div class="tmpl-logo-slot"><img src="" alt="AWS" /></div>
           </div>
         </div>
+
 
       </div>
 
@@ -172,7 +185,7 @@
           </div>
 
           <!-- Left: 3 scrolling logo columns -->
-          <div class="logo-cols logo-cols-left">
+          <div class="logo-cols logo-cols-left" id="connectLeft">
             <div class="logo-col">
               <div class="logo-col-inner" style="animation-duration:40s">
                 <div class="logo-box"><img src="" alt=""></div>
@@ -255,7 +268,7 @@
           </div>
 
           <!-- Right: 3 scrolling logo columns -->
-          <div class="logo-cols logo-cols-right">
+          <div class="logo-cols logo-cols-right" id="connectRight">
             <div class="logo-col">
               <div class="logo-col-inner dir-down" style="animation-duration:45s">
                 <div class="logo-box"><img src="" alt=""></div>
@@ -317,6 +330,9 @@
               </div>
             </div>
           </div>
+
+          <!-- Mobile: 3 horizontal scrolling rows -->
+          <div class="connect-rows-mobile" id="connectRowsMobile"></div>
 
         </div>
       </div>
@@ -464,6 +480,12 @@
               </div>
             </div>
 
+          </div>
+          <!-- Mobile swiper dots -->
+          <div class="how-swiper-dots">
+            <span class="how-dot"></span>
+            <span class="how-dot"></span>
+            <span class="how-dot"></span>
           </div>
         </div>
       </div>
