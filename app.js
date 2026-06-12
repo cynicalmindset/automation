@@ -284,4 +284,23 @@
 
   initHowSwiper();
 
+  /* ── Grid fade — fully gone before FAQ section ── */
+  const howSection = document.getElementById('how');
+  const faqSection = document.getElementById('faq');
+  if (howSection && faqSection) {
+    function updateGridOpacity() {
+      const faqTop  = faqSection.getBoundingClientRect().top;
+      const howTop  = howSection.getBoundingClientRect().top;
+      const viewH   = window.innerHeight;
+      /* fully visible while how-section is entering view,
+         fades to 0 by the time faq-section top hits the viewport */
+      const fadeStart = viewH;        /* how-section top at bottom of screen */
+      const fadeEnd   = 0;            /* faq-section top at top of screen    */
+      const opacity   = Math.max(0, Math.min(1, faqTop / viewH));
+      document.documentElement.style.setProperty('--grid-opacity', opacity.toFixed(3));
+    }
+    window.addEventListener('scroll', updateGridOpacity, { passive: true });
+    updateGridOpacity();
+  }
+
 })();
